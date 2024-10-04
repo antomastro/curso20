@@ -1,0 +1,32 @@
+/*
+  Crea un mixing que me permita colocar un elemento
+  como grid o flex, y que además me permita manejar
+  su alineacion del eje principal o el eje secundario
+
+@mixin display($display, $justify, $align, $columnas, $direction: row)
+  display: $display
+  @if $display == grid
+    grid-template-columns: $columnas
+  @if $display == flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+
+/*
+  Utiliza el mixin para creear:
+  - Un grid con 4 columnas
+  - Una fila verticalmente centrada y horizontalmente a la derecha
+  - Una fila verticalmente en el fondo y horizontalmente a la izquierda
+  - Una columna verticalmente abajo y horizontalmente centrada
+  
+.selector
+  @include display(grid, center, center, repeat(4,1fr))
+
+.selector
+  @include display(flex, flex-end, center, null)
+
+.selector
+  @include display(flex, flex-start, end, null)
+
+.selector
+  @include display(flex, flex-end, center, null, column)
