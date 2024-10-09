@@ -12,26 +12,31 @@
   </head>
   <!--Body-->
   <body>
-    <!--Contenido superior menù, logo etc-->
-    <nav class="fila">
-      <div class="left-section">
-        <img src="imagenes/menù.png" alt="menù" />
-        <img src="imagenes/logo.png" alt="logo" />
-      </div>
-      <div class="middle-secion">
-        <img src="imagenes/barra buscar.png" />
-        <img src="imagenes/lupa.png" />
-        <img src="imagenes/microfono.png" alt="microfono" />
-      </div>
-      <div class="right-section">
-        <img src="imagenes/crea.png" alt="crea" />
-        <img src="imagenes/notificación.png" alt="notificación" />
-        <img src="imagenes/cuenta.png" alt="cuenta" />
-      </div>
-    </nav>
-    <!--Main Content-->
+    <!--Header-->
+    <header>
+      <!--Primera seccion-->
+      <!--Contenido superior menù, logo etc (primera seccion)-->
+      <nav class="fila">
+        <div class="left-section">
+          <img src="imagenes/menù.png" alt="menù" />
+          <img src="imagenes/logo.png" alt="logo" />
+        </div>
+        <div class="middle-section">
+          <input type="texto" placeholder="Cerca" />
+          <img src="imagenes/lupa.png" />
+          <img src="imagenes/microfono.png" alt="microfono" />
+        </div>
+        <div class="right-section">
+          <img src="imagenes/crea.png" alt="crea" />
+          <img src="imagenes/notificación.png" alt="notificación" />
+          <img src="imagenes/cuenta.png" alt="cuenta" />
+        </div>
+      </nav>
+    </header>
+    <!--SEGUNDA SECTION -->
+    <!--Main Content (segunda seccion. con 1div que tiene 2 columnas)-->
+    <!--Esta es la primera columna CONTENIDO LATERAL (sidebar(que contiene cajitas))Lista en Columna -->
     <main>
-      <!--Contenido lateral (sidebar)-->
       <aside class="sidebar">
         <ul class="lista-en-columna">
           <li><img src="./imagenes/home.png" alt="home" /></li>
@@ -40,34 +45,111 @@
           <li><img src="./imagenes/Tú.png" alt="Tú" /></li>
         </ul>
       </aside>
-      <div class="derecha">
-        <!--Barra de Navegaciòn (Tutti, etc)-->
-        <div class="barra-de-navegacion">
-          <p>Tutti</p>
-          <p>Musica</p>
-          <p>Videojuegos</p>
+      <!--Barra de Navegaciòn (tutti,musica,etc)-->
+      <!-- Barra de navegacion(es una fila)derecha-->
+      <div class="section2">
+        <div class="derecha">
+          <div class="barra-de-navegacion">
+            <p class="parrafo-destacado"><b>Tutti</b></p>
+            <p class="parrafo"><b>Musica</b></p>
+            <p class="parrafo"><b>Videogiochi</b></p>
+            <p class="parrafo"><b>Manualità</b></p>
+            <p class="parrafo"><b>Tecnologìa</b></p>
+          </div>
         </div>
-        <!--Seccion videos-->
-        <div class="video">
-          <!-- Video -->
-          <section class="video-feed">
-            <div class="video">
-              <img
-                src="videos/copia van Gogh .png"
-                alt="La Oreja de Van Gogh"
-              />
-              <div class="informacion">
-                <div class="logo">
-                  <p>logo</p>
-                </div>
-                <div class="titulo">
-                  <h3>La Oreja de Van Gogh (Video Oficial)</h3>
-                  <p>La oreja de Van Gogh</p>
-                  <p>13k visualizaciones - Hace 1 hora</p>
-                </div>
+        <!--Seccion videos que es una columna-->
+
+        <div class="video-grid">
+          <div class="video">
+            <img
+              src="./videos/laorejadeVanGogh.png"
+              alt="La Oreja de Van Gogh"
+            />
+            <div class="informacion">
+              <div class="titulo">
+                <h3>La Oreja de Van Gogh (Video Oficial)</h3>
+                <p>Album: Dile al Sol</p>
+                <p>13k visualizaciones - Hace 1 hora</p>
               </div>
             </div>
-          </section>
+          </div>
+          <div class="video">
+            <img src="videos/AngelinaMango.png" alt="Angelina Mango" />
+            <div class="informacion">
+              <div class="logo">
+                <p>
+                  <img
+                    src="./videos/logoAngelinaMango.png"
+                    alt="Musica Estate 2024"
+                  />
+                </p>
+              </div>
+              <div class="titulo">
+                <h3>Musica Estate 2024 Mix</h3>
+                <p>Canzoni 2024</p>
+                <p>79.198 visualizaciones - 1 mese fa</p>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <img
+              src="./videos/addormentarsivelocemente.png"
+              alt="addormentarsivelocemente"
+            />
+            <div class="informacion">
+              <div class="logo">
+                <p>
+                  <img src="./videos/logoaddormentarsivelocemente.png" alt="" />
+                </p>
+              </div>
+              <div class="titulo">
+                <h3>Addormentarsi Velocemente</h3>
+                <p>Tècnica</p>
+                <p>13.000 followers</p>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <img src="./videos/hosting.png" alt="Hosting" />
+            <div class="informacion">
+              <div class="logo">
+                <p><img src="./videos/logohosting.png" alt="Hosting" /></p>
+              </div>
+              <div class="titulo">
+                <h3>Hosting</h3>
+                <p>Tecnologìa</p>
+                <p>1000 visualizzazioni</p>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <img src="./videos/hotmart.png" alt="Hotmart" />
+            <div class="informacion">
+              <div class="logo">
+                <p><img src="./videos/logohotmart.png" alt="Hotmart" /></p>
+              </div>
+              <div class="titulo">
+                <h3>Hotmart</h3>
+                <p>pagina ufficiale</p>
+                <p>12 visualizzazioni 1min. fa</p>
+              </div>
+            </div>
+          </div>
+          <div class="video">
+            <img src="./videos/unafattoria.png" alt="Una Fattoria" />
+            <div class="informacion">
+              <div class="logo">
+                <p>
+                  <img src="./videos/logounafattoria.png" alt="Una fattoria" />
+                </p>
+              </div>
+              <div class="titulo">
+                <h3>Una Fattoria</h3>
+                <p>Nuova Strategia</p>
+                <p>13k followers</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
