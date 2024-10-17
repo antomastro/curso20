@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* Crea un mixing que me permita colocar un elemento
+ * como grid o flex, y que además me permita manejar
+ * su alineacion del eje principal o el eje secundario */
+/* Utiliza el mixin para creear:
+ * - Un grid con 4 columnas
+ * - Una fila verticalmente centrada y horizontalmente a la derecha
+ * - Una fila verticalmente en el fondo y horizontalmente a la izquierda
+ * - Una columna verticalmente abajo y horizontalmente centrada */
+.selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.selector {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.selector {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  flex-direction: row;
+}
+
+.selector {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=practica.css.map */

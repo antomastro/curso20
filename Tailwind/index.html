@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!--Este codigo se coloca en el head porque sino no se puede escribir en tailwind-->
+  </head>
+  <body>
+    <h1
+      class="text-[#38BDF8] bg-green-600 text-center h-[100vh] flex justify-center items-center"
+    >
+      <span class="animate-pulse">Hola Mundo</span>
+    </h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] p-[25px] justify-items-center content-center gap-[20px]"
+    >
+      <div
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+<!--Agregò links-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1
+      class="text-[#38BDF8] bg-green-600 text-center h-[100vh] flex justify-center items-center"
+    >
+      <span class="animate-pulse">Hola Mundo</span>
+    </h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] p-[25px] justify-items-center content-center gap-[20px]"
+    >
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
+
+
+<!--Ejemplo de Animate-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <h1
+      class="text-[#38BDF8] bg-green-600 text-center h-[100vh] flex justify-center items-center"
+    >
+      <span class="animate__animated animate__bounce">Hola Mundo</span>
+    </h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] p-[25px] justify-items-center content-center gap-[20px]"
+    >
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
+
+<!--colocando en el div -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <h1
+      class="text-[#38BDF8] bg-green-600 text-center h-[100vh] flex justify-center items-center"
+    >
+      <span class="">Hola Mundo</span>
+    </h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] p-[25px] justify-items-center content-center gap-[20px]"
+    >
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
+
+<!--datos para el proyecto-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <h1
+      class="text-[#38BDF8] bg-green-600 text-center h-[100vh] flex justify-center items-center"
+    >
+      <span class="animate__animated animate__bounce">Hola Mundo</span>
+    </h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 h-[100vh] p-[25px] justify-items-center content-center gap-[20px]"
+    >
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <p>Imagen</p>
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="border flex flex-col p-8 justify-center items-center rounded-xl bg-gray-100/[0.8] shadow-md gap-[8px]"
+      >
+        <h2>Titulo</h2>
+        <p>descripcion</p>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
+
+<!--
+  Proyecto final
+  Realizar un portafolio o CV utilizando tailwind y además utilizando
+  librerias extras (debe ser responsive) (Debe verse bien)
+  Fecha de entrega: 18/10/2024
+-->

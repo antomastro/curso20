@@ -133,3 +133,10 @@ p {
     display: none;
   }
 }
+
+/* En pantallas de 640px de ancho o menos, usar dos columnas en lugar de cuatro */
+@media screen and (max-width: 640px) { 
+ .column {
+    width: 50%;
+}
+}
