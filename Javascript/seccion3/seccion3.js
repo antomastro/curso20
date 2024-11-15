@@ -292,3 +292,12 @@ function imprimirResultado(){
  * 
  * Nota: La programación orientada a eventos debe tener interfaz gráfica
  */
+
+
+
+/**
+ * Más ejercicios de programacion funcional, programacion orientada a eventos y programacion orientada a objetos
+ * 1) Crea una lista de tarea en donde puedas agregar, eliminar, editar y marcar como completada una tarea
+ * 2) Crea un conversor de divisas en donde puedas convertir de una divisa a otra
+ * 3) Crea un juego de memoria en donde puedas emparejar cartas
+ */
