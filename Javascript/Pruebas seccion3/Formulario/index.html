@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; margin: 0; background-color: #f4f4f4;">
+
+  <form id="formularioDeRegistro" style="display: flex; flex-direction: column; gap: 10px; background-color: #d5def1; border-radius: 8px; width:300px; padding: 10px;">
+
+      <h3 style="text-align: center;">Formulario de Registro</h3>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"placeholder="Escribe tu nombre">
+    
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido"placeholder="Escribe tu apellido">
+    
+
+    <label for="email">Email:</label>
+    <input type="email" id="email"placeholder="Escribe tu correo">
+    
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password"placeholder="Escribe tu contraseña">
+    
+    <label for="confirmPassword">Confirmar Contraseña:</label>
+    <input type="password" id="confirmPassword"placeholder="Repite tu contraseña">
+
+    <button style="margin-top: 10px;background-color: #007bff;  border-radius: 4px;color: white;"type="submit">Registrarse</button>
+  </form>
+</body>
+<script src="./formulario.js"></script>
+</html>

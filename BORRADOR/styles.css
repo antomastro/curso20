@@ -1,0 +1,25 @@
+
+*{
+  margin: 0px;
+
+}
+#conCambios{
+  color: rgba(44, 150, 9, 0.934);
+  background-color: rgb(178, 207, 235);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 30px;
+  border: 10px solid rgb(9, 8, 8);
+  width: 300px;
+  height: 50px;
+}
+
+.conCambios{
+  color: rgba(188, 10, 143, 0.843);
+  text-align: center;
+}
+
+body{
+  background-color: rgb(240, 230, 230);
+}
+
