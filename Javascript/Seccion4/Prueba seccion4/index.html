@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style=>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>El tiempo</title>
 </head>
-<body>
-  <div id="razaDePerros"></div>
+<body style=" text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;padding: 80px; background-size: cover;background-image: url(https://tse3.mm.bing.net/th?id=OIP.HwXM-syTdZY3G8ph50ywKwHaEK&pid=Api&P=0&h=180);">
+  <h2>Revisa el meteo!</h2>
+  <input type="text" id="ciudad" placeholder="Ingresa una ciudad">
+  <button onclick="buscarClima()">Buscar</button>
+  <div style="display: flex;  flex-direction: column; align-items: center;margin-top: 30px; font-size: 30px; " id="resultado"></div>
+  <script src="./clima.js"></script>
 </body>
-<script src="./prueba.js"></script>
 </html>
