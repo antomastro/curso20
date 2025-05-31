@@ -4,6 +4,58 @@
 let tasks = [];
 
 /**
+ * @function addTask
+ * @description Función que agrega una tarea al arreglo de tareas
+ */
+function addTask() {
+  let task = document.getElementById("task").value;
+  tasks.push(task);
+  document.getElementById("task").value = "";
+  showTasks();
+}
+
+/**
+ * @function showTasks
+ * @description Función que muestra las tareas en el DOM
+ */
+function showTasks() {
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+  tasks.forEach((task, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = `${task} <button onclick="removeTask(${index})">X</button>`;
+    list.appendChild(li);
+  });
+}
+
+function removeTask(index) {
+  tasks.splice(index, 1);
+  showTasks();
+}
+
+/**
+ * @function removeTask
+ * @description Función que elimina una tarea del arreglo de tareas
+ * @param {number} index - Índice de la tarea a eliminar
+ */
+function removeTask(index) {
+  tasks.splice(index, 1);
+  showTasks();
+}
+
+document.getElementById("add").addEventListener("click", addTask);
+
+
+
+///////////////////////
+
+
+/**
+ * Arreglo que almacena las tareas
+ */
+let tasks = [];
+
+/**
  * Verificar si existen tareas en LocalStorage
  */
 if(localStorage.getItem("tasks") != null){

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./perfil.css">
+  <title>Perfil</title>
+</head>
+<body>
+<!--formulario de perfil-->
+<main class="contenedor">
+  <header>
+    <div>
+    <h3>Perfil</h3>
+  </header>
+  <div id="perfil">
+    <form action=" "id="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" placeholder="Escribe tu apellido" required>
+      <label for="nombreUsuario">Nombre de Usuario:</label>
+      <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre de usuario" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Escribe tu correo" required>
+      <button type="submit" id="button-guardar">Guardar</button>
+    </form>
+    </div>
+      <!--boton para el modo oscuro. "Toggle" para cambiar el modo-->
+  <button id= "toggleModoOscuro">Modo Oscuro</button>
+</main>
+</body>
+<script src="./perfil.js"></script>
+</html>

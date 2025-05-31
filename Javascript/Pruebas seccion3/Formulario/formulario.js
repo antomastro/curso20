@@ -16,15 +16,15 @@ form.addEventListener("submit", (event) => {
   const expresionPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,32}$/;
   const expresionConfirmPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,32}$/;
 
-  if (!expresionNombre) {
+  if (!nombre) {
     alert("Ingrese su nombre");
     return; 
   }
-  if (!expresionApellido) {
+  if (!apellido) {
     alert("Ingrese su apellido");
     return;   
   }
-  if (!expresionEmail) {
+  if (!email) {
     alert("Ingrese su email");
     return;
   }
