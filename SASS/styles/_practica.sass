@@ -1,0 +1,83 @@
+/*
+  Crea un mixing que me permita colocar un elemento como grid o flex, y que además me permita manejar
+  su alineacion del eje principal o el eje secundario
+
+@mixin display($display, $justify, $align, $columnas, $direction: row)
+  display: $display
+  @if $display == grid
+    grid-template-columns: $columnas
+  @if $display == flex
+    justify-content: $justify
+    align-items: $align
+    flex-direction: $direction
+    @if $justify == center or $align == center
+      background: blue
+      /*
+        Operadores relacionales
+        > Mayor que
+        >= Mayor o igual que
+        < Menor que
+        <= Menor o igual que
+        == Comparacion
+      /*
+        Operador lógicos
+        AND: Significa "Y", ambas condiciones deben ser ciertas
+        OR: Significa "O" Al menos una condicion debe de cumplirse
+        NOT: Significa "No" significa lo contrario
+      /*
+        Operador lógicos
+    @else 
+    /*
+      Se activaria en caso de que el valor no sea flex
+    /*
+
+// @mixin display($display, $justify, $align, $columnas, $direction: row)  // se coloca el @mixin display y en los paréntesis se colocan las variables que se van a usar en el mixin. La variable $display define si se va a usar grid o flex, $justify es para la alineación del eje principal, $align es para la alineación del eje secundario (justify y align solo se utilizan con display flex), $columnas es para definir el número de columnas en caso de que se use grid y $direction: row es para definir la dirección del flex (por defecto es row).
+//  display: $display  // display es una propiedad que se usa para definir el tipo de visualización del elemento, en este caso se usa la variable $display que puede ser grid o flex.
+//  @if $display ==  grid  // @if es una condicional=si display es grid ,grid-template-columns: $columnas se ejecuta
+//    grid-template-columns: $columnas   //sirve para definir el número de columnas que quiero utilizar en el grid.
+//  @if $display == flex
+//    justify-content: $justify  // sirve para alinear los elementos en el eje principal (horizontal o vertical, dependiendo de la dirección del flex)
+//    align-items: $align  // sirve para alinear los elementos en el eje secundario (horizontal o vertical, dependiendo de la dirección del flex)
+//    flex-direction: $direction:row  // sirve para definir la dirección del flex, que puede ser row (horizontal) o column (vertical). Por defecto es row.
+// Este codigo permite crear una fila o columna y seleccionar si se quiere el contenido centrado o a la derecha centrado, a la izquierda o abajo y centrado, y también permite crear un grid con un número variable de columnas.
+
+
+
+// En base al mixin creado, se van a colocar los valores que se van a utilizar en cada uno de los ejercicios que siguen a continuación:
+
+/*
+  Utiliza el mixin para crear:
+  - Un grid con 4 columnas
+  - Una fila verticalmente centrada y horizontalmente a la derecha
+  - Una fila verticalmente en el fondo y horizontalmente a la izquierda
+  - Una columna verticalmente abajo y horizontalmente centrada
+
+//     @mixin display($display, $justify, $align, $columnas, $direction: row)
+// Se coloca .selector ya que es unicamente un ejemplo demostrativo.
+
+
+.selector
+  @include display(grid, center, center, repeat(4,1fr))  // Aquí se crea un grid con 4 columnas ( repeat(4,1fr) es la forma elegante en lugar de escribir: (1fr 1fr 1fr 1fr)), los valores center y center no afectan al grid porque solo se usan con display flex, pero se colocan obligatoriamente porque hay que enviar la informacion en el orden que se pide en el mixin. 
+
+.selector
+  @include display(flex, flex-end, center, null) // Aquí se crea una fila con display flex, los elementos están alineados verticalmente al centro (center) y horizontalmente a la derecha (flex-end). El valor null se coloco porque no se usa el número de columnas en este caso, ya que es una fila y no un grid.
+
+.selector
+  @include display(flex, flex-start, end, null) // Aquí se crea una fila con display flex, los elementos están alineados verticalmente al fondo (end) y horizontalmente a la izquierda (flex-start). El valor null se coloco porque no se usa el número de columnas en este caso, ya que es una fila y no un grid.
+
+.selector
+  @include display(flex, flex-end, center, null, column)  // Aquí se crea una columna con display flex, los elementos están alineados verticalmente al fondo (flex-end) y horizontalmente al centro (center). El valor null se coloco porque no se usa el número de columnas en este caso, ya que es una columna y no un grid. Además, se especifica la dirección como column para que los elementos se dispongan en una columna.
+
+
+/*
+  Proyecto final de SASS
+  Puedes elegir entre los dos siguientes proyectos:
+
+  1) Realizar una copia de la página de perfil de una cuenta de instagram (Ejercicio retador)(body dividido en dos columnas, seria un grid donde tengo una a la izquierda y otra a la derecha mas grande,etc )
+
+  2) Realizar un blog. Este debe contener una barra de navegación del sitio web, un header(algo que llame la atención del usuario), 
+  y varios blogs(6 o 8) en un grid que deben de mostrar una imagen, un titulo, una breve descripción
+  y un botón de leer más. La página debe verse creible, es decir, sentirse como que es un producto
+  real y no una simple practica de un estudiante.
+  Los proyectos deben de ser responsive, es decir, que se vean bien en dispositivos móviles y de escritorio.
+  Fecha de entrega: 10/10/24 */

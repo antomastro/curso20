@@ -1,6 +1,5 @@
-body {
-
-    font-family:Impact,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  body {
+    font-family:Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 20px;
     min-height: 80vh;
@@ -9,14 +8,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color:rgb(0, 166, 255);
-    
-    }
+  }
 
-    h1 {
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
-    }
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
   .columna {
     display: flex;

@@ -1,3 +1,9 @@
+                        <!-- SASS primera clase -->
+<!-- = Syntactically Awesome Stylesheets-->
+<!-- SASS es un preprocesador de CSS-->
+<!-- Permite usar variables, , mixins,  modulos, logica etc. -->
+<!--Sass usa indentacion, sin llaves ni punto y coma-->
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +11,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./styles/styles.css">
+--Aqui enlazo el styles.css que se genera al compilar el sass. IMPORANTE : El archivo styles.css nunca se modifica-- 
+
 </head>
 <body>
+
+div#inicial>p{Hola Mundo} --en esta forma estoy escribiendo en HTML de forma rapida. Esto quiere decir que quiero un div con un id inicial que dentro tenga un parrafo con el texto Hola Mundo--
+
+  <div id="inicial">
+    <p>Hola Mundo</p>
+  </div>
+
+--quiero el id inicial en color azul. voy a ir a styles.sass y creo la variable #inicial  color:blue-- (en sass no hay llaves,ni punto y coma, en SASS la tabulacion indica que algo forma parte del otro --
+-- instalar en VS code las extensiones Sass(.sass only) y Live Sass Compiler (esta es la que transforma el sass en css. automaticamente crea archivos style.css, style.css.map )
+
+  </body>
+</html>
+
+<Fin de la primera clase-->
+
+
+
+<!--SASS segunda clase-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>--Sass</title>
+
+  <!--Enlazo el styles.css que se genera al compilar el sass-->
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+  <!--div con id inicial, que tiene una clase columna-centrada -->
+
   <div id="inicial" class="columna-centrada">
     <p>Hola Mundo</p>
   </div>
+
+  <!--div con id inicial, que tiene una clase columna-top-->
+
   <div class="columna-top">
     <p>Hola Mundo</p>
   </div>
-  <!--Blog-->
+
+  <!--Ambas son columnas ,una centrada y otra arriba.  En css abria que seleccionar columna-central, display flex y flex direction column,alain items center y lo mismo para columna-top. En este modo se repite el codigo una y otra vez mientras que en SASS se puede hacer con un Mixings (que seria como una especie de variable y la podemos reutilizar en cualquier parte del codigo una y otra vez) -->
+
+  <!-- Blog (*ver explicación de la creación de un bloque con mismo código en  la forma rápida, más abajo. En este caso es un blog. En el div central se agrega luego un botón <button> )-->
+
+  <!-- div con la clase blogs --> 
   <div class="blogs">
     <div class="blog">
       <h3>Esto es un blog</h3>
@@ -22,7 +71,7 @@
     <div class="blog">
       <h3>Esto es un blog</h3>
       <p>Descripcion del blog</p>
-      <button>Leer más</button>
+      <button>Leer màs</button>   <!-- Botón que se agrega al blog -->
     </div>
     <div class="blog">
       <h3>Esto es un blog</h3>
@@ -31,3 +80,27 @@
   </div>
 </body>
 </html>
+
+
+  <!--   * Explicación de la creación del  Blog en la forma rápida *  -->
+
+  <!--div.blog*3>h3{Esto es un blog}+p{Descripcion del blog}-- > 3 DIV CON la CLASE BLOG y cada uno va a tener dentro  un titular <h3>{Esto es un blog} y (+) un parrafo (p){Descripcion del blog}-- Se presiona enter y se genera el codigo. En caso de que no se genere el codigo, se puede presionar enter varias veces o se borra el ultimo caractere , se vuelve a escribir y se presiona enter. Aqui todos los div tienen el mismo tamaño-->
+
+  <!--  <div class="blogs">
+    <div class="blog">
+      <h3>Esto es un blog</h3>
+      <p>Descripcion del blog</p>
+    </div>
+    <div class="blog">
+      <h3>Esto es un blog</h3>
+      <p>Descripcion del blog</p>
+    </div>
+    <div class="blog">
+      <h3>Esto es un blog</h3>
+      <p>Descripcion del blog</p>
+    </div>
+  </div>
+  </body>
+  </html> -->
+
+

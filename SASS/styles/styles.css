@@ -1,9 +1,6 @@
 @charset "UTF-8";
-/* Mi primera variable */
-/* Mixings
- * Son similares a las variables, sin embargo. Puede almacenar lógica más compleja
- * que una variable e incluso tener variaciones. Son similares a la Funciones en
- * cualquier otro lenguaje de programación */
+/* /*A partir de este archivo se genera un archivo style.css*/
+/*Por lo tanto escribimos aqui en SASS y lo genera en el archivo style.css que comprende la maquina y el css nunca se modifica */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +18,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
 }
 
 .columna-top {
@@ -37,6 +33,45 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .blogs .blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Mi primera variable */
+  /* Mixings
+   * Son similares a las variables, sin embargo. Puede almacenar lógica más compleja
+   * que una variable e incluso tener variaciones. Son similares a la Funciones en
+   * cualquier otro lenguaje de programación */
+}
+.blogs .blog * {
+  margin: 0;
+  padding: 0;
+}
+.blogs .blog #inicial {
+  color: blue;
+}
+.blogs .blog #inicial p {
+  background-color: red;
+}
+.blogs .blog .columna-centrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+.blogs .blog .columna-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20vh;
+}
+.blogs .blog .blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.blogs .blog .blogs .blog {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

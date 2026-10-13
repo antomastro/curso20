@@ -1,45 +1,272 @@
-  /*Mi primera variable*/
-$base-color: blue
+// archivo principal de SASS
+@use './components/_general.sass' 
+@use './components/_body.sass' 
+
+
+// @use permite importar otros archivos SASS dentro del archivo principal.
+// En este caso, se están importando dos archivos: _general.sass y _body.sass.
+// Se coloca _antes del nombre del archivo para indicar que es un archivo parcial que no compilara por si solo archivo .css y asi queda todo mas organizado y ordenado.
+// IMPORTANTE: en el primer archivo deben de estar los codigos que se van a usar en el segundo archivo, por ejemplo, si en _general.sass se define una variable, esa variable se puede usar en _body.sass.Por lo tanto, es importante que el orden de los archivos sea correcto para que las variables y mixins vengan reconocidos en el segundo archivo.
+// IMPORTANTE: en caso de que no funcione con @use, se puede usar @import, pero @use es la forma recomendada y moderna de importar archivos SASS.
+// @import es una forma más antigua y menos eficiente de importar archivos SASS, ya que no permite la modularidad y el encapsulamiento de los estilos como lo hace @use. Además, @import puede causar problemas de rendimiento y duplicación de código si se usa incorrectamente.(se escribe: @import./components/_general.sass')
+
+// *A partir de este archivo se genera un archivo style.css que comprende la maquina y el css nunca debemos modificarlo */
+// Para que el Sass funcione correctamente es necesario que el archivo sea guardado con la extension .sass y verificar que el compilador de Sass esté configurado correctamente en tu entorno de desarrollo presionando Watch Sass en la terminal o en el editor de código que estés utilizando. Si,en la terminal, aparece el mensaje Watching significa que Sass está funcionando correctamente y está observando los cambios en el archivo .sass para compilarlo automáticamente a CSS cada vez que se guarda el archivo.
+
+//                    * Codigos en SASS y su explicación:
+
+// #inicial
+//   color: blue 
+
+// Este es el codigo para el id inicial escrito en codigo sass. La tabulación es importante porque indica que el código es hijo del id inicial. Si no tabulo, el código no se aplicará al id inicial 
+
+// Para poder usar el color: blue en cualquier parte del codigo, se puede usar una variable.
+
+//                     * MI PRIMERA VARIABLE *
+
+// Las Variables permiten guardar valores que se pueden reutilizar en cualquier parte del código(como colores, tamaños, fuentes etc).
+// Van siempre al principio del archivo.
+// Las variables se definen con el signo de ( $ ) dolar delante del nombre de la variable.
+
+// Declaracion de una variable:
+//            $nombrevariable: valorvariable 
+
+// Ejemplo:
+//              $base-color: blue    
+// El nombre de la variable , en este caso es base-color, y el valor es blue (ver como se aplica la variable en el codigo de #inicial (ir mas abajo despues de otros codigos) ).  
+
+
+//                            * Mixin *
+
+// Siempre van en la parte de arriba del archivo.
+// Son similares a las variables, sin embargo puede almacenar una lógica más compleja que una variable e incluso tener variaciones. 
+// Son similares a la Funciones en cualquier otro lenguaje de programación.
+// En el Mixin va el codigo que se quiere usar una y otra vez.
+// Se define con la palabra clave @mixin, seguido del nombre del mixin y los parámetros que se le quieren pasar entre paréntesis ().
+// Dentro del mixin, se definen las propiedades y valores que se quieren aplicar.
+// Sintaxis:
+//           @mixin nombremixin()       
+//             propiedad: valor
+//             propiedad: valor
+//             propiedad: valor 
+//             propiedad: valor
+
+// Ejemplo:
+//           @mixin columna()
+//             display: flex
+//             flex-direction: column
+//             justify-content:center
+//             align-itent: center
+
+//          * Con los argumentos entre parentesis:
+// Al @mixin columna()  se le pasa los argumentos horizontal y vertical con el signo de ($) dolar delante de cada uno de ellos porque son variables ( luego se pueden utilizar en include (@include) ).
+// Tambiem se cambia el valor de justify-content y align-items por los parámetros que se le pasaron al mixin, es decir, $vertical y $horizontal, esto porque en una columna el eje principal es el eje vertical y el eje secundario es el eje horizontal.
+// En este caso, el mixin columna se usa para crear una columna flexible con alineación horizontal y vertical 
+
+//           @mixin columna($horizontal, $vertical)
+/*             display: flex
+               flex-direction: column
+               justify-content: $vertical
+               align-items: $horizontal
+
+//Las 4 propiedades y sus respectivos valores son los que se pueden repetir en qualquier parte del código llamando a columna.
+
+//En el siguiente codigo se colocan valores por default a los argumentos del mixin columna. Se colocan los dos puntos (:) y el valor que se le quiere asignar a cada uno de los argumentos que van separados por comas (,).
+
+//  @mixin columna($horizontal: center, $vertical: center)
+//    display: flex
+//    flex-direction: column
+//    justify-content: $vertical
+//    align-items: $horizontal 
+// Esto significa que si no se le pasan valores al mixin columna, se usaran los valores por defecto, es decir, center para ambos ejes (horizontal y vertical).
+
+
+//                    * Creacion de un Grid *  
+// Creacion de un grid (sistema de filas y columnas) usando el @mixin grid.
+// El @mixin grid se usa para crear un sistema de cuadrícula (grid) con un número variable de columnas.
+// Se define con la palabra clave @mixin, seguido del nombre del mixin, que en este caso se llama grid, y un parámetro $columnas que representa el número de columnas en la cuadrícula. 
+// Dentro del mixin, se define el estilo de la cuadrícula utilizando display: grid y grid-template-columns: $columnas, donde $columnas es el parámetro que se le pasa al mixin.
+// El grid($columnas) permite crear un sistema de cuadrícula flexible y reutilizable en el código, donde se puede especificar el número de columnas que se desean en la cuadrícula.
+// Por ejemplo, si se quiere crear una cuadrícula de 3 columnas, se puede llamar al mixin de la siguiente manera: @include grid(1fr 1fr 1fr), donde 1fr representa una fracción del espacio disponible en la cuadrícula(ver mas abajo en el codigo de .blogs).
+// display y grid-template-columns son las propiedades que se usan para crear la cuadrícula flexible.
+// El valor grid define que el elemento se comporta como un contenedor de cuadrícula, y grid-template-columns define el número y el tamaño de las columnas en la cuadrícula.
+
+//      @mixin grid($columnas)
+//       display: grid
+//       grid-template-columns: $columnas
+
+
+// Importante Para eliminar los estilos por defecto de los navegadores, se usa el asterisco (*). Este código elimina los márgenes y el padding de todos los elementos del documento. Es una buena práctica para evitar problemas de diseño en diferentes navegadores.
 
 /*
-  Mixings
-  Son similares a las variables, sin embargo. Puede almacenar lógica más compleja
-  que una variable e incluso tener variaciones. Son similares a la Funciones en
-  cualquier otro lenguaje de programación*/
-
-@mixin columna($horizontal, $vertical)
-  display: flex
-  flex-direction: column
-  justify-content: $vertical
-  align-items: $horizontal
-
-@mixin grid($columnas)
-  display: grid
-  grid-template-columns: $columnas
-*
-  margin: 0
-  padding: 0
-
-#inicial
-  color: $base-color
-  p
-    background-color: red
-
-.columna-centrada
-  @include columna(center, center)
-
-.columna-top
-  @include columna(center, flex-start)
-  height: 20vh
-
-.blogs
-  @include grid(1fr 1fr 1fr)
-  .blog
-    @include columna(center, flex-start)  
+              *
+                margin: 0
+                padding: 0
 
 
+//                   * Anidamiento de código *
+
+// El anidamiento de código en SASS permite escribir selectores dentro de otros selectores. {{{ IMPORTANTE siempre hay que tabular para que el código se aplique correctamente.
+
+// Ejemplo de anidamiento de código en SASS incluido el HTML que se usa en el ejemplo de abajo.:  
+<div class="perfil">
+  <div class="perfil__info">
+    <h2 class="perfil__nombre">Lexpin</h2>
+    <p class="perfil__descripcion">Academia de Programación Web</p>
+    <button class="perfil__boton">Contactar</button>
+  </div>
+</div>
+// En el código de arriba, se puede ver que la clase perfil__info está anidada dentro de la clase perfil. Esto significa que los estilos aplicados a perfil__info solo se aplicarán a los elementos dentro de perfil, lo que ayuda a mantener el código más organizado y legible.
+
+.perfil
+  .perfil__info
+    .perfil__nombre
+    .perfil__descripcion
+    .perfil__boton
+      :hover
+        background-color: blue
+        color: white
+// En el código de arriba, se puede ver que la clase perfil__info está anidada dentro de la clase perfil. Esto significa que los estilos aplicados a perfil__info solo se aplicarán a los elementos dentro de perfil, lo que ayuda a mantener el código más organizado y legible. Se agrego un hover para que cuando se pase el mouse por encima de la clase perfil__boton, se cambie el color de fondo a azul y el color del texto a blanco.
+
+
+// En el codigo de abajo se quiere definir un id llamado #inicial, que tendrá un color de texto azul porque se ha definido anteriormente una variable llamada base-color con el valor blue (color: $base-color)  
+// Al poner el paragrafo ( p ) dentro del id inicial, el color background del parrafo será rojo. 
+/*
+                #inicial
+                  color: $base-color
+                  p
+                    background-color: red
+
+
+//                    * Include *
+// El include es una forma de reutilizar el código de un mixin en diferentes partes del código sin tener que escribirlo de nuevo.
+// Para usar el mixin, se usa la palabra clave @include, seguido del nombre del mixin y los parámetros que se le quieren pasar
+// Sintaxis:
+//           @include nombremixin()
+// Ejemplo:
+//           @include columna()
+
+// Tanto en columna-centrada como en columna-top se le dice que @include columna (que es el nombre del mixin creado anteriormente) escribiendo:
+// .columna-centrada 
+//   @include columna()   
+// .columna-top 
+//   @include columna()
+// De esta forma se aplica el mixin columna a las clases columna-centrada y columna-top y nos permite reutilizar el código de forma más eficiente, limpio y escribir menos lineas de código.
+
+// Ahora como en el @mixin columna se le han pasado dos parámetros ($horizontal, $vertical), se puede escribir de la siguiente manera: 
+
+// Sintaxis :  .selector 
+//               @include nombremixin() 
+
+// Ejemplo:
+//             .columna-centrada
+//               @include columna(center, center)
+
+// De esta forma, se le dice al @mixin columna que el eje horizontal y el eje vertical serán ambos center, es decir, centrados.
+// Como en el @mixin columna($horizontal: center, $vertical: center) se le han asignado valores por defecto a los parámetros, se puede llamar al mixin columna sin pasarle ningún parámetro entre los parentesis y seguirá funcionando con los valores por defecto osea 
+//  .columna-centrada
+//     @include columna()
+
+
+// Como columna-top la queremos en la parte superior de la columna y deje un espacio vacio en la parte inferior de la columna, se escribe de la siguiente manera:
+
+/* .columna-top
+//   @include columna(center, flex-start)
+//    height: 20vh
+
+// A columna-top se le dice que el eje horizontal será center y el eje vertical será flex-start, es decir, alineado al principio del eje vertical y con una altura de 20vh(osea en la parte superior de la columna y deja un espacio vacio en la parte inferior).
+
+
+//                     * Creacion de un Blog usando grid *
+// Supongamos que el blog va a ser una grilla(grid= sistema de filas y columnas) y ademas queremos che cada uno de los blog sea una columna. 
+// En el codigo de abajo se usa el @include grid para crear una cuadrícula de 3 columnas, donde cada columna ocupa un espacio igual (1fr) en la cuadrícula.
+// Mientras que .blog es una clase que se aplica a cada uno de los elementos del blog. Aqui se usa el @include columna para crear una columna flexible con alineación horizontal(center, que es el eje principal) y vertical(flex-start, que es el eje secundario) que seria en la parte superior de la columna.
+
+/* .blogs
+//   @include grid(1fr 1fr 1fr)
+//    .blog
+//      @include columna(center, flex-start)  
 
 
 
-    @import './components/_general.sass'
-    @import './components/_body.sass'
+  //                    * Condicionales en SASS *
+// Puedes usar @if, @else if, @else dentro de mixins o bloques para aplicar estilos si se cumplen ciertas condiciones.
+// Por ejemplo, se quiere cambiar el color de fondo según un parámetro:
+// @mixin fondoColor($color)
+//   @if $color == 'rojo'
+//     background-color: red
+//   @else if $color == 'verde'
+//     background-color: green  
+//   @else            
+//     background-color: gray
+// Luego se puede usar este mixin en tu código:
+//  .mi-clase
+//    @include fondoColor('rojo')
+//   Esto aplicará un fondo rojo a .mi-clase si el parámetro es 'rojo', verde si es 'verde', y gris en cualquier otro caso.
+
+
+
+//                      * Extensiones en SASS(@extend) *
+// Las extensiones te permiten compartir estilos entre selectores sin duplicar código.
+// Por ejemplo, puedes usar la extensión @extend para heredar estilos de un selector padre a uno hijo:
+// .padre
+//   color: red
+// .hijo
+//   @extend .padre
+//   Esto heredará el color red de .padre a .hijo, sin duplicar el estilo.
+// Puedes usar @extend para compartir estilos entre selectores sin duplicar código.
+// Si quieres que .hijo herede los estilos de padre pero con un color diferente, puedes hacerlo así:
+// .padre
+//   color: red
+// .hijo
+//   @extend .padre
+//   color: blue
+// Esto hará que .hijo tenga el color blue, pero también heredará cualquier otro estilo de .padre.
+
+
+//                      * Operadores relacionales
+// Puedes usar operadores relacionales para comparar valores en SASS.
+// Los operadores relacionales son:
+//                      > Mayor que
+//                      >= Mayor o igual que
+//                      < Menor que
+//                      <= Menor o igual que
+//                      == Comparacion
+//                      != Desigualdad
+
+//                      * Operadores lógicos
+// Los operadores lógicos son: 
+                        // And, Or, Not
+
+// AND: Significa "Y", ambas condiciones deben ser ciertas
+// OR: Significa "O" Al menos una condicion debe de cumplirse
+// NOT: Significa "No" significa lo contrario de una condicion
+// Puedes usar estos operadores en condicionales para crear lógica más compleja.
+// Por ejemplo, si quieres aplicar un estilo solo si una variable es mayor que 10 y otra es menor que 20:
+// @if $variable1 > 10 and $variable2 < 20
+//   Esto aplicara el estilo solo si $variable1 es mayor que 10 y $variable2 es menor que 20
+  // Ejemplo con NOT:
+// @if not $variable1 == 10
+//   Esto aplicara el estilo solo si $variable1 no es igual a 10
+
+
+//                      * Funciones en SASS *
+// Las funciones en SASS te permiten crear lógica más compleja y reutilizable.
+// Puedes definir una función con @function y luego usarla en tu código.
+// Por ejemplo, si quieres calcular el area de un cuadrado:
+// @function area($lado)
+//   @return $lado * $lado
+// Luego puedes usarla en tu código:
+// .cuadrado
+//   width: area(10px) // Esto calculará el area del cuadrado con un lado de 10px
+
+//                      * Comentarios en SASS *
+// Puedes usar comentarios de una sola línea con // o comentarios de varias líneas con /* ... */
+// Los comentarios de una sola línea se usan para explicar una línea específica de código, mientras que los comentarios de varias líneas se usan para explicar bloques de código más grandes o para dejar notas importantes.
+
+//                      * Importante *
+// Recordar que SASS es un preprocesador de CSS, lo que significa que debemos asegúrarnos de tener configurado el entorno de desarrollo para compilar SASS a CSS automáticamente para que los navegadores lo entiendan.
+// Estos codigos se separan en archivos diferentes para mantener el código organizado y modular.
+// En este caso, se importan los archivos _general.sass y _body.sass, que contienen estilos generales y específicos del cuerpo respectivamente. Se coloca piso ( _ )antes del nombre del archivo para indicar que es un archivo parcial que no se compilará por sí solo, sino que se importará en otros archivos SASS.
+// Para que el archivo _general.sass y _body.sass se importen correctamente, hay que asegurarse de que estén en la misma carpeta que el archivo principal styles.sass o especificar la ruta correcta si están en una ubicación diferente con @use './ruta/del/archivo.sass'.
+// Los códigos vienen divididos según su importancia en diferentes archivos dentro de una carpeta llamada COMPONENTS.

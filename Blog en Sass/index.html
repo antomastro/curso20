@@ -1,85 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog sobre la Vida de San Francesco</title>
+  <title>Blog sobre la Vida de San Francisco de Asìs</title>
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Blog sobre la vida de San Francesco de Asìs, su infancia, conversiòn, legado e iglesia.">
+  <meta name="keywords" content="San Francesco di Assisi,San Francisco de Asìs, Santo, Blog, Infancia, Conversiòn, Legado, Amor por la naturaleza,Imagenes para colorear, Contacto">
+  
+  <!--Enlazo el styles.css que se genera al compilar el sass-->
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="icon" type="imàgen-de-favicon" href="./styles/imàgenes/imagendefavicon.jpeg"> 
+  <link rel="icon" type="image/jpeg" class="imagen-de-favicon" href="./styles/imagenes/imagendefavicon.jpeg"> 
 </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <img src="./styles/imàgenes/logo.jpg" alt="logo">
-      <h2 class="nombre-blog">San Francisco</h2>
-    </div>
-  </header>
-  <!--Tìtulo del Blog -->
-  <div class="fila">
-    <img src="./styles/imàgenes/fondo.png" class="imagen" alt="imagen de San Francisco de Asìs">
-      <h1>La Vida de <em>"San Francisco de Asìs"</em></h1>
-        <iframe aspeat-ratio: 16-9; src="https://www.youtube.com/embed/jYIq8KrlXPg?si=Cx94LJLJu7egj5hl"  title="YouTube video player" frameborder="40px">    
-        </iframe>
-  </div> 
-  <nav class="barra">
-    <p><a href="#introduccion">Introducciòn</a></p>
-    <p><a href="#infancia">Infancia</a></p>
-    <p><a href="#conversion">Conversiòn</a></p>
-    <p><a href="#legado">Legado</a></p>
-    <p><a href="#contactanos">Contactanos</a></p>
-  </nav>
-  <!--Todo el Contenedor -->
-  <main>
-    <div class="columna">
-      <!-- Section de Introducciòn -->
-      <section id="introduccion">
-        <h2>Introducciòn</h2>
-        <p>San Francisco de Asìs (Italia), fue un Santo italiano y  fundador de la Orden Franciscana.Su vida y enseñanzas han   inspirado a millones de personas en todo el mundo.</p>
-      </section>
-      <!-- Section de Infancia -->
-      <section id="infancia">
-        <h2>Infancia</h2>
-        <p>Nacido en Asìs, Italia, en 1181 o 1182, Francesco creciò   en una familia acomodada, pero desde joven mostrò una   inclinaciòn hacia el servicio a los pobres y necesitados.</p>
-      </section>
-      <!-- Section de Conversiòn -->
-      <section id="conversion">
-        <h2>Conversiòn</h2>
-        <p>Tras un largo periodo de bùsqueda personal y   encuentros  con la pobreza y la enfermedad, Francesco   renunciò a todas   sus posesiones y comenzò su vida de  servicio a los demàs.</p>
-      </section>
-      <!-- Section de Legado -->
-      <section id="legado">
-        <h2>Legado</h2>
-        <p>Su legado incluye la fundaciòn de la Orden Franciscana,  y  sus ensenanzas sobre la pobreza y el amor por la  naturaleza  siguen siendo relevantes hoy en dìa.</p>
-      </section>
-      <!-- Section de Contacto -->
-      <div class="form">
-        <section id="Contactanos">
-          <h2>Contactanos</h2>
-          <p>Para saber más sobre San Francesco o participar en   eventos relacionados, llena el campo con tus datos y  seremos felices en ayudarte.</p>
-          <form method="post" action="/">
-            <!--El fieldset es para agrupar los inputs-->
-            <fieldset>
-              <legend>Informaciòn personal</legend>
-              <label style="display: block;" >Nombre: *
-              <input type="Tu nombre" placeholder="obligatorio"   required></label>
-              <label style="display: block;">Email: *
-              <input type="email" placeholder="obligatorio"   required></label>
-              <label style="display: block;"> Telèfono:
-              <input type="tel" placeholder= "(opcional)"></label>
-              <label style="display: block;"  >Comentario:
-              <textarea name="Comentarios" placeholder="Escribe tu  comentario aquì" maxlength="200palabras" rows="2"  required></textarea></label>
-              <button>Enviar</button>
-            </fieldset>
-          </form>
-        </section>
-      </div>
-    </div>
+<!-- Body del Blog (con fondo)-->
+<body style="background-image: url('./styles/imagenes/stigmas.jpg');background-position: center; line-height: 50px ;
+background-size: cover;">
 
-  </main>
+  <!-- Header del Blog -->
+  <header class="header">
+    <!--Logo del Blog y el tìtulo h1 con el nombre San Francisco de Asìs -->    
+      <img class="logo" src="./styles/imagenes/logo-san-francesco.jpg" alt="logo">
+      <h1>Blog sobre la Vida de <em>"San Francisco de Asìs"</em></h1>    
+  </header>
+
+  <!-- Barra de navegaciòn(nav) con enlaces a las secciones del blog --> 
+  <nav class="nav">
+    <ul>
+      <li><a href="#introduccion">Introducciòn</a>
+      <li><a href="#infancia">Infancia</a>
+      <li><a href="#conversion">Conversiòn</a>
+      <li><a href="#legado">Legado</a>
+      <li><a href="#naturaleza">Amor por la naturaleza</a>
+      <li><a href="#colorear">Imàgenes para colorear</a>
+      <li><a href="#contactanos">Contactanos</a>
+    </ul>
+  </nav>
+
+
+  <!--Video del Blog-->
+    <div class="video">      
+      <iframe aspeat-ratio: 16-9; src="https://www.youtube.com/embed/jYIq8KrlXPg?si=Cx94LJLJu7egj5hl"  title="YouTube video player" frameborder="40" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="300px" height="200px">    
+      </iframe>
+    </div>
+  <!-- Main del Blog -->
+    <main>
+      <div class="contenedor">
+        <!-- Section de Introducciòn con class y id -->
+        <section class="section" id="introduccion">
+          <h2>Introducciòn</h2>
+          <img src="./styles/imagenes/gif.gif" alt="gif" class="gif">            
+          <p>Giovanni di Pietro di Bernardone, conocido como San Francisco de Asìs (1181-1226) es un santo      aliano y fundador de la Orden Franciscana.Durante su juventud llevò una vida mundana. Tras una      talla entre Asis y Perugia estuvo encarcelado un año, enfermò y decidiò cambiar su forma de     vir. Su vida y enseñanzas han inspirado a millones de personas en todo el mundo.</p>
+        </section>
+        <!-- Section de Infancia -->
+        <section class="section" id="infancia">
+          <h2>Infancia</h2>
+          <img src="./styles/imagenes/infancia.png" alt="infancia" class="infancia">      
+          <p>Nacido en Asìs, Italia, el 5 de julio de 1181 o 1182, Francesco creciò en una familia      omodada, pero desde joven mostrò una inclinaciòn hacia el servicio a los pobres y necesitados.      s padres fueron Madonna Pica de Bourlemont y Pedro de Bernardone.</p>
+        </section>
+        <!-- Section de Conversion -->
+        <section class="section" id="conversion">
+          <h2>Conversiòn</h2>
+          <img src="./styles/imagenes/conversion.jpg" alt="conversion">        
+          <p>Tras un largo periodo de bùsqueda personal y encuentros con la pobreza y la enfermedad,      perimentó una profunda transformación espiritual. En uno de sus momentos de oración, Francisco      cuchó la voz de Dios que le decía: repara mi iglesia que està en ruinas. Tomando estas palabras      pie de la letra, Francisco decidió dedicar su vida a la reconstrucción de las iglesias físicas.     n embargo, pronto se dio cuenta de que Dios le estaba llamando a una misión mucho más profunda y      gnificativa. San Francisco  renunciò a todas sus posesiones y comenzò su vida de servicio a los      màs.</p>
+        </section>
+        <!-- Section de Legado -->
+        <section class="section" id="legado">
+          <h2>Legado</h2>
+          <img src="./styles/imagenes/legado.jpg" alt="legado">
+          <p>Su legado incluye la fundaciòn de la Orden Franciscana, y sus ensenanzas sobre la pobreza, la      mildad y el amor por la creación de Dios, siguen siendo relevantes hoy en dìa.</p>
+        </section>
+        <!-- Section amor por la naturaleza -->
+        <section class="section"  id="naturaleza">
+          <h2>Amor por la naturaleza</h2>
+          <img src="./styles/imagenes/naturaleza.jpg" alt="naturaleza">
+          <p>San Francisco de Asìs es el santo patrono de los animales y el medio ambiente. Consideraba a       das las criaturas como hermanos y hermanas, y cantaba alabanzas a Dios a través de sus cantos y       emas sobre la creación. Es conocido por su famoso <strong>Cántico de las criaturas.</strong> Su       da y enseñanzas han influido en la Iglesia Católica y en muchas otras tradiciones religiosas.</p>
+        </section>
+        <!-- Secciòn de Imàgenes para colorear-->
+        <section class="section" id="colorear">
+          <h2>Imàgenes para colorear</h2>
+          <img src="./styles/imagenes/colorear-naturaleza.jpg" alt="naturaleza-colorear">
+          <img src="./styles/imagenes/tau-colorear.jpg" alt="tau-colorear">
+          <img src="./styles/imagenes/colorear.png" alt="colorear">
+          <img src="./styles/imagenes/animales-colorare.jpg" alt="animales-colorare">
+        </section>
+        <!-- Seccion de Contacto con formulario-->
+        <div class="form">
+          <section class="section" id="contactanos">
+            <h2>Contactanos</h2>
+            <p>Para saber más sobre San Francisco de Asìs o participar en eventos relacionados, llena el      mpo con tus datos y seremos felices en ayudarte.</p>
+            <form id="formulario" method="post" action="/">
+              <!--El fieldset es para agrupar los inputs-->
+              <fieldset>
+                <legend>Informaciòn personal</legend>
+                <label style="display: block;" >Nombre: *
+                <input type="text" name="Nombre" placeholder="obligatorio"   required></label>
+                <label style="display: block;">Email: *
+                <input type="text" name="Email" placeholder="obligatorio"   required></label>
+                <label style="display: block;"> Telèfono:
+                <input type="text" name="Telefono" placeholder= "(opcional)"></label>
+                <label style="display: block;">Comentario:
+                <textarea type="text" name="Comentarios" placeholder="Escribe tu  comentario aquì" xlength="200" rows="2"  required></textarea></label>
+                <button>Enviar</button>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
     <!-- Footer -->
     <footer>
-      <p> Blog sobre La vida de San Francesco 2024 </p>
+      <p class="p-footer"> Blog sobre La vida de San Francisco de Asìs.</p>
+      <p class="p-footer">Creado por Antonia Mastrolonardo</p>
     </footer>
 </body>
 </html>
